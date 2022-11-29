@@ -58,7 +58,7 @@ jobs:
                   type:${{ github.event.inputs.operator}}
   
   python:
-    
+    runs-on: ubuntu-latest
     #runs-on: self-hosted
   
     steps:
