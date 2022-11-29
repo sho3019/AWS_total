@@ -40,6 +40,7 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    #runs-on: ubuntu-latest
     #runs-on: self-hosted
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -47,8 +48,8 @@ jobs:
       - uses: actions/checkout@v3
 
   input:
-    
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
+    #runs-on: self-hosted
 
     steps:
       - name: input data
@@ -57,7 +58,8 @@ jobs:
                   type:${{ github.event.inputs.operator}}
   
   python:
-    runs-on: self-hosted
+    
+    #runs-on: self-hosted
   
     steps:
       - name: Set Python version
