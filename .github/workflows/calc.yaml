@@ -5,13 +5,34 @@ name: AWS
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  #push:
+    #branches: [ "main" ]
+  #pull_request:
+    #branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    branches: ["main"]
+    inputs:
+      num1:
+        type: int
+        required: true
+        description: 'num1 data'
+      
+      num2:
+        type: int
+        required: true
+        description: 'num2 data'
+      
+      operator:
+        type: choice
+        required: true
+        description: 'operator'
+        options:
+          - "plus"
+          - "minus"
+          - "cross"
+          - "devision"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -19,18 +40,37 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
+    #runs-on: self-hosted
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+  input:
+    
+    runs-on: self-hosted
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+    steps:
+      - name: input data
+        run: echo Data1:${{ github.event.inputs.num1}},  
+                  Data2:${{ github.event.inputs.num2}},
+                  type:${{ github.event.inputs.operator}}
+  
+  python:
+    runs-on: self-hosted
+  
+    steps:
+      - name: Set Python version
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.6
+
+      - name: Python_clac.py
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+              cd Python
+              python calc.py ${{ github.event.inputs.num1}} ${{ github.event.inputs.num2}} ${{ github.event.inputs.operator}}
+      
+      - name: error sentence
+        if: failure()
+        run: |
+              echo "error : incorrect input"
