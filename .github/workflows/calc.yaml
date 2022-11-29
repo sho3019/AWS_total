@@ -69,8 +69,9 @@ jobs:
 
       - name: Python_clac.py
         run: |
-              ls
+              
               cd Python
+              ls
               python calc.py ${{ github.event.inputs.num1}} ${{ github.event.inputs.num2}} ${{ github.event.inputs.operator}}
       
       - name: error sentence
