@@ -1,5 +1,5 @@
-#import input
-import input_json
+#from aws2 import input
+from aws3 import input
 import sys
 
 def calc(operation, num1, num2):
@@ -23,12 +23,12 @@ def calc(operation, num1, num2):
     return ans
 
 
-#num1 = input.num1
-#num2 = input.num2
-#operation = input.operation
-num1 = input_json.num1
-num2 = input_json.num2
-operation = input_json.operation
+num1 = input.num1
+num2 = input.num2
+operation = input.operation
+#num1 = input_json.num1
+#num2 = input_json.num2
+#operation = input_json.operation
 ans = calc(operation, num1, num2)
 print(ans)
 
