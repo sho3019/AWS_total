@@ -26,9 +26,6 @@ def calc(operation, num1, num2):
 num1 = input.num1
 num2 = input.num2
 operation = input.operation
-#num1 = input_json.num1
-#num2 = input_json.num2
-#operation = input_json.operation
 ans = calc(operation, num1, num2)
 print(ans)
 
