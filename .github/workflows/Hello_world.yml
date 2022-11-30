@@ -31,6 +31,7 @@ jobs:
 
   Hello_world:
     runs-on: self-hosted
+    needs: build
 
     steps:
       # Runs a single command using the runners shell
