@@ -10,6 +10,7 @@ on:
   
     paths:
       -'.github/workflows/**'
+      -'!calc.yml'
   #pull_request:
     #branches: [ "main" ]
 
