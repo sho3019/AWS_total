@@ -1,5 +1,5 @@
 import input
-#import input_json
+import sys
 
 def calc(operation, num1, num2):
     ans = 0
@@ -17,11 +17,7 @@ def calc(operation, num1, num2):
         ans = num1 / num2
     
     else:
-        ans = "error : incorrect operation"
-        ans = float(ans)
-        
-    
-    #ans = "answer : " + str(ans)
+        sys.exit("error")
     
     return ans
 
@@ -29,6 +25,9 @@ def calc(operation, num1, num2):
 num1 = input.num1
 num2 = input.num2
 operation = input.operation
+""" num1 = input_json.num1
+num2 = input_json.num2
+operation = input_json.operation """
 ans = calc(operation, num1, num2)
 print(ans)
 
