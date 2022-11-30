@@ -6,10 +6,10 @@ name: aws3_1
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    #branches: [ "main" ]
+    branches: [ "main" ]
 
-    paths:
-      -'Python/**'
+    #paths:
+     # -'Python/**'
       #-'.github/workflows/**'
   #pull_request:
     #branches: [ "main" ]
@@ -41,6 +41,7 @@ jobs:
 
       - name: Python output.py
         run: |
+            ls
             cd Python/aws3
             python output.py
   
