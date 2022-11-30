@@ -9,7 +9,8 @@ on:
     branches: [ "main" ]
 
     path:
-      -'Python/calc.py'
+      #-'Python/calc.py'
+      -'.github/workflows/**'
   #pull_request:
     #branches: [ "main" ]
 
