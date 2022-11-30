@@ -6,7 +6,7 @@ name: aws1
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "aaa" ]
+    branches: [ "main" ]
   #pull_request:
     #branches: [ "main" ]
 
@@ -24,7 +24,16 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            Hello_world:
+              - 'Hello_world.yaml'
+  Hello_world:
+    runs-on: self-hosted
 
+      steps:
       # Runs a single command using the runners shell
       - name: comment out
         run: echo "Hello world"
