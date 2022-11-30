@@ -37,7 +37,7 @@ jobs:
 
       - name: Python output.py
         run: |
-            cd Python
+            cd Python/aws3
             python output.py
   
       - name: error sentence
