@@ -1,5 +1,5 @@
-#from aws2 import input
-from aws3 import input
+from aws2 import input
+#from aws3 import input
 import sys
 
 def calc(operation, num1, num2):
