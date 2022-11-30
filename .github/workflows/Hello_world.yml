@@ -29,7 +29,7 @@ jobs:
         with:
           filters: |
             Hello_world:
-              - 'Hello_world.yml'
+              - '/.github/workflows/Hello_world.yml'
   Hello_world:
     runs-on: self-hosted
 
