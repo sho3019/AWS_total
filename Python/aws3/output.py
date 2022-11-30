@@ -1,4 +1,6 @@
 import json 
+import sys
+sys.path.append('../')
 import calc
 
 json_open = open('../input.json', 'r')
