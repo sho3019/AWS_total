@@ -28,9 +28,6 @@ num2 = input.num2
 operation = input.operation
 ans = calc(operation, num1, num2)
 print(ans)
-print(ans)
-
-
 
 #error_flag = 0
 #operation = "plus"
