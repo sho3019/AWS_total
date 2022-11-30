@@ -8,8 +8,8 @@ on:
   push:
     branches: [ "main" ]
   
-  #paths:
-    #-'.github/workflows/Hello_world.yml'
+    paths:
+      -'.github/workflows/Hello_world.yml'
   #pull_request:
     #branches: [ "main" ]
 
