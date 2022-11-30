@@ -8,8 +8,7 @@ on:
   push:
     branches: [ "main" ]
 
-    paths:
-      -'Python/**'
+    paths: ['Python/**']
       #-'.github/workflows/**'
   #pull_request:
     #branches: [ "main" ]
