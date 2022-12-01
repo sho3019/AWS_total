@@ -32,11 +32,4 @@ num2 = input.num2
 operation = input.operation
 ans = calc(operation, num1, num2)
 print("answer : " + str(ans))
-#error_flag = 0
-#operation = "plus"
-#num1 = 1
-#num2 = 2
-
-#ans = calc(operation, num1, num2, erroflag)
-#print(ans)
     
