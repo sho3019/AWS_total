@@ -1,14 +1,10 @@
-#from aws2 import input
-#from aws3 import input
 import sys
 args = sys.argv
 if(len(args) == 4 ):
     from aws2 import input
-    #print("aws2")
 else:
     from aws3 import input
-    #print("aws3")
-
+    
 
 def calc(operation, num1, num2):
     ans = 0
@@ -35,7 +31,7 @@ num1 = input.num1
 num2 = input.num2
 operation = input.operation
 ans = calc(operation, num1, num2)
-print(ans)
+print("answer : " + str(ans))
 #error_flag = 0
 #operation = "plus"
 #num1 = 1
