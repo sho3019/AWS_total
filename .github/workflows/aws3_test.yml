@@ -28,7 +28,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
   
-  python_execute:
+  execute_calc.py:
     runs-on: self-hosted
     needs: build
 

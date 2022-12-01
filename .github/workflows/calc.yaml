@@ -50,7 +50,7 @@ jobs:
                   Data2:${{ github.event.inputs.num2}},
                   type:${{ github.event.inputs.operator}}
 
-  python-execute:
+  execute_calc.py:
     runs-on: self-hosted
     needs: write_input-data
     steps:
