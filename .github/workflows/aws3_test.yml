@@ -51,7 +51,7 @@ jobs:
 
   load_artifacts:
     runs-on: self-hosted
-    needs: python_execute
+    needs: execute_calc
     steps: 
       - name: Load artifacts
         uses: actions/upload-artifact@v3
