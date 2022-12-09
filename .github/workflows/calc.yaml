@@ -57,7 +57,7 @@ jobs:
       - name: Set Python version
         uses: actions/setup-python@v3
         with:
-          python-version: 3.6
+          python-version: 3.10.6
 
       #- name: Python_Input
         #run: python input.py ${{ github.event.inputs.num1}} ${{ github.event.inputs.num2}} ${{ github.event.inputs.operator}}
