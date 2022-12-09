@@ -2,6 +2,8 @@ import sys
 args = sys.argv
 if(len(args) == 4 ):
     from aws2 import input
+elif(len(args) == 2 or len(args) == 7):
+    from aws2_new import input
 else:
     from aws3 import input
     
